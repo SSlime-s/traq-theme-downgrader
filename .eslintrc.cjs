@@ -8,6 +8,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react-hooks/recommended',
     'plugin:react/recommended',
+    "plugin:jsx-a11y/recommended",
     'plugin:@typescript-eslint/recommended',
     'plugin:astro/recommended',
     'prettier',
@@ -35,7 +36,7 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   root: true,
-  plugins: ['react'],
+  plugins: ['react', 'jsx-a11y'],
   rules: {
     '@typescript-eslint/no-unused-vars': [
       'warn',
