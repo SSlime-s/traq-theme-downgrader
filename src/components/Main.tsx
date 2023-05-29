@@ -15,6 +15,10 @@ const parseTheme = (theme: string): string | null => {
       throw new Error('Invalid theme version')
     }
 
+    // secondarySub は v2 で廃止されたが、 v1 では存在しないと構文エラーになる
+    // 実際に使われている箇所はないので適当に secondary の値を入れておく
+    v1Theme.background.secondarySub = v1Theme.background.secondary
+
     return JSON.stringify(v1Theme, null, 2)
   } catch (e) {
     return null
